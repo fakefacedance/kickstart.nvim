@@ -400,11 +400,9 @@ require('lazy').setup({
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
+        defaults = {
+          layout_strategy = 'vertical',
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
@@ -740,7 +738,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        php = { { 'pint', 'php_cs_fixer' } },
+        php = { { 'php_cs_fixer', 'pint' } },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
